@@ -18,7 +18,8 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16' # Specify the version you need
+          node-version: '15'
+          cache: 'npm'
 
       # Step 3: Install dependencies
       - name: Install dependencies
@@ -30,7 +31,7 @@ jobs:
 
       # Step 5: Run formatter (Prettier)
       - name: Run Prettier
-        run: npm run prettier
+        run: npx prettier --write ./src/
 
       # Step 6: Run tests (Jest)
       - name: Run tests
