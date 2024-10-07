@@ -1,5 +1,5 @@
 name: CI Pipeline
-# branches
+
 on:
   pull_request:
     branches:
